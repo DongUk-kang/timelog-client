@@ -46,7 +46,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(), // TODO: Production에서는 적용되면 안됨
     new HtmlWebpackPlugin({
       template: "public/index.html",
     }),
@@ -56,6 +56,5 @@ module.exports = {
     port: port,
     open: true,
     historyApiFallback: true,
-    hot: true,
   },
 };

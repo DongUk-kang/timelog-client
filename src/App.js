@@ -1,21 +1,20 @@
 /* eslint-disable no-undef */
 import React from "react";
-import { hot } from "react-hot-loader";
-import { BrowserRouter as Router,  Route, Switch, Link, BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from './pages/Login';
+import Login from "./pages/Login";
 import Register from "./pages/Register";
 
 const App = () => {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route path='/' component={() => <Login />} />
-                <Route path="/home" component={() => <Home />}/>
-                <Route path="register" component={() => <Register />}/>
-            </Switch>
-        </BrowserRouter>
-    )
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
-export default hot(module)(App);
+export default App;
