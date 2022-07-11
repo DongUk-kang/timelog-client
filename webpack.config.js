@@ -12,6 +12,11 @@ module.exports = {
     filename: "bundle.[hash].js",
     publicPath: "/",
   },
+  resolve: {
+    alias: {
+      // "@/*": path.resolve(__dirname, "./src"),
+    },
+  },
   module: {
     rules: [
       {
